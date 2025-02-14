@@ -301,7 +301,7 @@ if (username) {
        
         // Event delegation for dynamically created edit button
         document.addEventListener('click', function(e) {
-          if (e.target.closest('.edit_profile')) {
+          if (e.target.closest('.edit-profile-btn')) {
             const modal = new bootstrap.Modal(document.getElementById('editProfileModal'));
             modal.show();
           }
