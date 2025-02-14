@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home-Instagram Clone{% endblock %}
+
+{% block content %}
+    <div class="second_container">
+        <!--***** posts_container start ****** -->
+        <div class="main_section">
+            <div class="posts_container">
+                <div class="stories">
+                    <div class="owl-carousel items">
+                    </div>
+                </div>
+
+                <div class="posts">
+                </div>
+
+            </div>
+        </div>
+        <!--***** posts_container end ****** -->
+
+        <!--***** followers_container start ****** -->
+        <div class="followers_container">
+            <div>
+                <div class="cart">
+                    <a href="{% url 'users-profile' username=request.user.username %}">
+                        <div>
+                            <div class="img">
+                                <img src="{{ viewed_user.userprofile.profile_image.url }}" alt="Profile image">
+                            </div>
+                            <div class="info">
+                                <p class="name">{{ viewed_user.username }}
+                                    <svg aria-label="Verified" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)" height="12" role="img" viewBox="0 0 40 40" width="12">
+                                        <title>Verified</title>
+                                        <path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z" fill-rule="evenodd"></path>
+                                    </svg> 
+                                </p>
+                                <p class="second_name">{{ viewed_user.userprofile.full_name }}</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="switch">
+                        <a href="#">Switch</a>
+                    </div>
+                </div>
+                <div class="suggestions">
+                    <div class="title">
+                        <h4>Suggestions for you</h4>
+                        <a class="dark" href="#">See All</a>
+                    </div>
+                    <div class="cart">
+                        <div>
+                            <div class="img">
+                                <img src="{% static 'profile/boa hancock.jpg' %}" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="name">boa🐍</p>
+                                <p class="second_name">Followed by luffy</p>
+                            </div>
+                        </div>
+                        <div class="switch">
+                            <button class="follow_text" href="#">follow</button>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div>
+                            <div class="img">
+                                <img src="{% static 'profile/leviackerman.jpg' %}" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="name">captainlevi_</p>
+                                <p class="second_name">Suggested for you</p>
+                            </div>
+                        </div>
+                        <div class="switch">
+                            <button class="follow_text" href="#">follow</button>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div>
+                            <div class="img">
+                                <img src="{% static 'profile/food channel.jpg' %}" alt="Profile image">
+                            </div>
+                            <div class="info">
+                                <p class="name">justfood🍜</p>
+                                <p class="second_name">Suggested for you</p>
+                            </div>
+                        </div>
+                        <div class="switch">
+                            <button class="follow_text" href="#">follow</button>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div>
+                            <div class="img">
+                                <img src="{% static 'profile/red_hair_pirates.jpg' %}" alt="Profile image">
+                            </div>
+                            <div class="info">
+                                <p class="name">redhairpirates☠️</p>
+                                <p class="second_name">Followed by luffy</p>
+                            </div>
+                        </div>
+                        <div class="switch">
+                            <button class="follow_text" href="#">follow</button>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div>
+                            <div class="img">
+                                <img src="{% static 'profile/trafalgar_law.jpg' %}" alt="Profile image">
+                            </div>
+                            <div class="info">
+                                <p class="name">trafalgar.law</p>
+                                <p class="second_name">Followed by mouse</p>
+                            </div>
+                        </div>
+                        <div class="switch">
+                            <button class="follow_text" href="#">follow</button>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footerf">
+                    <div class="footer-topf">
+                        <span>About,</span>
+                        <span>Help,</span>
+                        <span>Press,</span>
+                        <span>API,</span>
+                        <span>Jobs,</span>
+                        <span>Privacy,</span>
+                        <span>Terms,</span>
+                        <span>Locations,</span>
+                        <span>Language,</span>
+                        <span>Meta Verified</span>
+                    </div>
+                    <div class="footer-bottomf">
+                        <span>© 2024 Instagram Clone. All rights reserved.</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--***** followers_container end ****** -->
+    </div>
+{% endblock content %}

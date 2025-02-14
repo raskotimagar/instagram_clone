@@ -1,0 +1,7 @@
+eastblue/
+.eastblue/
+.env/
+*.env
+.vscode/
+
+__pycache__/

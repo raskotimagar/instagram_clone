@@ -1,0 +1,262 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background-color: #f0f0f0;
+    --button-text-color: #333333;
+    --button-hover-background: #e0e0e0;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background-color: #333333;
+    --button-text-color: #f0f0f0;
+    --button-hover-background: #444444;
+}
+
+
+body {
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--text-color);
+    overflow-y: visible !important;
+    display: block;
+    height: 100%;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+}
+.content{
+    position: relative;
+    left: 245px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px 12px 16px 12px;
+    margin-bottom: 19px;
+    width: 196px;
+}
+
+/* Show the image by default, hide the SVG */
+.insta-logo {
+    width: 100%;
+    max-width: 106px;
+    height: 29px;
+    cursor: pointer;
+}
+.li-logo {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-grow: 0.1;
+    cursor: pointer; 
+}
+
+.insta-svg {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .insta-logo {
+        display: none;
+    }
+
+    .insta-svg {
+        display: block;
+    }
+
+    .logo-container {
+        padding: 5px; 
+    }
+}
+
+.sidebar {
+    width: auto;
+    position: fixed; 
+    transition: width 0.3s;
+    border-right: 1px solid rgb(38,38,38);
+    position: fixed;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar ul {
+    margin: 0;
+    width: 220px;
+    list-style: none;
+    padding: 8px 12px 20px 12px;
+    height: 100dvh; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    max-width: 196px;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+ .icon-button {
+    display: flex; 
+    align-items: center; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sidebar li:hover {
+    background-color: var(--button-hover-background);
+    transition: transform 0.0003s ease;
+    border-radius: 10px;
+}
+
+.sidebar li:hover .icon {
+    transform: scale(1.1); 
+}
+
+.sidebar .li-logo:hover {
+    background-color: transparent; 
+    transform: none;
+    cursor: default; 
+}
+.profile-container{
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+
+.image-container {
+    width: 24px; 
+    height: 24px;
+    overflow: hidden; 
+    margin-right: 10px;
+    border-radius: 12px;
+    top: 12px;
+}
+
+.icon-container img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+}
+
+.icon-text {
+    display: inline;
+    padding-left: 16px; 
+}
+
+@media (max-width: 768px) { 
+    .sidebar {
+        width: 72px;
+    }
+
+    .sidebar ul {
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+
+    }
+
+    .sidebar li {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 12px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        cursor: pointer;
+    }
+    
+
+    .sidebar li.li-logo {
+        width: 48px;    
+        height: 96px;
+        padding:0px 0px 23px 0px;
+        margin: 12px 0px 0px;
+        justify-content: center; 
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .logo-container{
+        width: 48px;    
+        height: 73px;
+        padding:0px 0px 23px 0px;
+        margin: 12px 0px 0px;
+        justify-content: center; 
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 0;
+    }
+    .svg-container {
+        width: 24px;
+        height: 24px;
+        padding: 12px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .icon-text {
+        display: none; 
+    }
+
+    .sidebar li:hover .icon-container {
+        background-color:var(--button-hover-background);
+        border-radius: 50%; 
+        transition: background-color 0.2s ease; 
+    }
+
+    .sidebar li:hover .icon-container img {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+
+    .svg-container:hover .insta-svg {
+        transform: scale(1.1); 
+        transition: transform 0.2s ease;
+    }
+} 
+
+.post-stories{
+    max-width: 630px;
+    width: 100%;
+}

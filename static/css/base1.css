@@ -1,0 +1,114 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background-color: #f0f0f0;
+    --button-text-color: #333333;
+  }
+  
+
+  [data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background-color: #333333;
+    --button-text-color: #f0f0f0;
+  }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    padding-top: 20px;
+    border-right: 1px solid #333;
+    transition: width 0.3s ease;
+}
+
+/* Sidebar Collapsed View for Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    .sidebar ul li span {
+        display: none;
+    }
+    .sidebar ul li {
+        justify-content: center;
+    }
+}
+
+/* Sidebar List and Icon Buttons */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+.icon-button:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+/* SVG Icon Styling */
+.icon {
+    fill: #fff;
+    transition: transform 0.2s;
+}
+
+/* Logo Styling */
+.li-logo img {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Content Area with Smooth Transition */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 80px;
+    }
+}
